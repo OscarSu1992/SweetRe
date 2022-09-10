@@ -1,0 +1,730 @@
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    // border: 1px solid black;
+    padding-left: 42px;
+    padding-right: 42px;
+}
+
+.footer_container {
+    max-width: 1024px;
+    margin: 0 auto;
+    // border: 1px solid black;
+    padding-left: 122px;
+    padding-right: 122px;
+}
+
+// 小網的container
+@media(max-width: 770px) {
+    .container {
+        padding: 0px;
+    }
+
+    .footer_container {
+        max-width: 375px;
+        padding: 30px;
+    }
+}
+
+
+// 大網header
+.header {
+    .logo {
+        width: 220px;
+        // height: 40px;
+        // object-fit:contain;
+    }
+    .navbar {
+        display: inline-block;
+        ul {
+            li {
+                display: inline-block;
+                width: 70px;
+                font: normal normal 600 16px/73px PingFang TC;
+                color: #3F5D45;
+            }
+        }
+    }
+    .cart {
+        width: 24px;
+        // display: inline-block;
+        // height: 24px;
+        // object-fit: contain;
+    }
+    .headerInner {
+        display: flex;
+        justify-content: space-between;
+        height: 100px;
+        align-items: center;
+        .right {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+// 小網header
+@media(max-width: 770px) {
+    .header {
+        .headerInner {
+            justify-content: space-around;
+            .navbar_m {
+                width: 18px;
+                height: 24px;
+            }
+            .logo_m {
+                width: 114px;
+            }
+            .right {
+                .cart {
+                    width: 32px;
+                }
+            }
+        }
+    }
+}
+
+// 大網banner
+.banner {
+    overflow: hidden;  
+    .mainVisual {
+        width: 940px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+// 小網banner
+@media(max-width: 770px) {
+    .banner {
+        .mainVisual {
+            width: 770px;
+        }
+    }
+}
+
+// 大網topic
+.topic {
+    position: relative;
+    top: calc(-256px / 3);
+    .topicInner {
+        display: flex;
+        justify-content: center;
+
+        .cardwrapper {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            
+            &.cardimage1 {
+                background-image: url(../img/mainSorting1.png);
+            }
+            &.cardimage2 {
+                border-left: 1px solid white;
+                border-right: 1px solid white;
+                background-image: url(../img/mainSorting2.png);
+            }
+            &.cardimage3 {
+                background-image: url(../img/mainSorting3.png);
+            }
+        }
+
+        .card {
+            backdrop-filter: blur(5px);
+            width: 256px;
+            height: 256px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            writing-mode: vertical-lr;
+            background-color: #3F5D45d0;
+            color: white;
+            letter-spacing: 4px;
+            &:hover {
+                background-color: #ffe180d0;
+                color: #3F5D45;
+            }
+        }
+
+    }
+}
+
+// 小網topic
+// 須研究banner跟topic之間為何多了5px
+@media(max-width: 770px) {
+    .topic {
+        top: -5px;
+        .topicInner {
+            .cardwrapper {
+                width: 100%;
+                .card {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+// 大網product1 產品文章
+.product1 {
+    .productBackground {
+        background-color: #EAF0ED;
+        height: 420px;
+        .productInner {
+            height: 420px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .product1_image {
+                position: relative;
+                width: 460px;
+                height: 460px;
+                object-fit: cover;
+                
+            }
+            p {
+                writing-mode: vertical-rl;
+                font: normal normal 300 16px/18px PingFang TC;
+                letter-spacing: 0px;
+                color: #8DA291;
+                height: 280px;
+            }
+            @media(min-width: 800px) {
+                p {
+                    line-height: 20px;
+                }
+            }
+            @media(min-width: 850px) {
+                p {
+                    line-height: 30px;
+                }
+            }
+            @media(min-width: 950px) {
+                p {
+                    line-height: 35px;
+                }
+            }
+
+            .product1_title {
+                position: relative;
+                width: 89px;
+                top: -75px;
+            }
+        }
+    }
+}
+
+// 小網product1 產品文章
+@media(max-width: 770px) {
+    .product1 {
+        position: relative;
+        top: 120px;
+        .productBackground {
+            height: unset;
+            .productInner {
+                height: unset;
+                display: block;
+                .product1_title_m {
+                    width: 196px;
+                    display: block;
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    top: -90px;
+                }
+                .product1_image {
+                    width: 100%;
+                    object-fit: cover;
+                    top: -60px;
+                    height: unset;
+                    aspect-ratio: 4 / 3;
+                }
+                p {
+                    writing-mode: horizontal-tb;
+                    height: unset;
+                    padding: 30px;
+                    position: relative;
+                    top: -30px;
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+}
+
+// 大網product2 產品文章
+.product2 {
+    position: relative;
+    top: 105px;
+    .productBackground {
+        background-color: #EAF0ED;
+        height: 420px;
+        .productInner {
+            height: 420px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .product2_image {
+                position: relative;
+                width: 460px;
+                height: 460px;
+                object-fit: cover;
+                
+            }
+            p {
+                writing-mode: vertical-rl;
+                font: normal normal 300 16px/18px PingFang TC;
+                letter-spacing: 0px;
+                color: #8DA291;
+                height: 280px;
+            }
+            @media(min-width: 800px) {
+                p {
+                    line-height: 20px;
+                }
+            }
+            @media(min-width: 850px) {
+                p {
+                    line-height: 30px;
+                }
+            }
+            @media(min-width: 950px) {
+                p {
+                    line-height: 35px;
+                }
+            }
+
+            .product2_title {
+                position: relative;
+                width: 89px;
+                top: -75px;
+            }
+        }
+    }
+}
+
+// 小網product2 產品文章
+@media(max-width: 770px) {
+    .product2 {
+        top: 240px;
+        .productBackground {
+            height: unset;
+            .productInner {
+                height: unset;
+                display: block;
+                .product2_title_m {
+                    width: 196px;
+                    display: block;
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    top: -90px;
+                }
+                .product2_image {
+                    width: 100%;
+                    object-fit: cover;
+                    top: -60px;
+                    height: unset;
+                    aspect-ratio: 4 / 3;
+                }
+                p {
+                    writing-mode: horizontal-tb;
+                    height: unset;
+                    padding: 30px;
+                    position: relative;
+                    top: -30px;
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+}
+
+// 大網slogan
+.slogan {
+    position: relative;
+    top: 200px;
+    .slogan_image {
+        width: 95px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+// 小網slogan
+@media(max-width: 770px) {
+    .slogan {
+        top: 270px;
+        .slogan_image_m {
+            width: 196px;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+// 大網 三張card
+.productCard_advise {
+    position: relative;
+    top: 280px;
+    .productCard_inner {
+        display: flex;
+        justify-content: space-between;
+        .productCard2 {
+            border-left: 5px solid white;
+            border-right: 5px solid white;
+        }
+        .productCard {            
+            .productCard_visual {
+                position: relative;
+                p {
+                    position: absolute;
+                    top: 0px;
+                    left: 20px;
+                    writing-mode: vertical-lr;
+                    background-color: #3F5D45;
+                    font: normal normal 600 16px/36px PingFang TC;
+                    letter-spacing: 0px;
+                    color: #EAF0ED;
+                    width: 36px;
+                    height: 107px;
+                    text-align: center;
+                }
+                @media(max-width: 900px) {
+                    p {
+                        left: 15px;
+                        font-size: 14px;
+                        width: 32px;
+                        height: 90px;
+                        line-height: 32px;
+                    }
+                }
+                .heart {
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                    width: 20px;
+                }
+                
+                .productCard_image {
+                    width: 100%;
+                    max-height: 315px;
+                    object-fit: cover;
+                }
+            }
+
+            .productCard_text {
+                display: flex;
+                position: relative;
+                top: -5px;
+                .productCard_name {
+                    font: normal normal 300 20px/54px PingFang TC;
+                    color: #3F5D45;
+                    border: 1px solid #EAF0ED;
+                    width: 100%;
+                    text-align: center;
+                }
+                // 這裡為什麼name已經inline-block了,price不會跑上來
+                .productCard_price {
+                    font: normal normal 600 20px/54px PingFang TC;
+                    color: #3F5D45;
+                    border: 1px solid #EAF0ED;
+                    width: 100%;
+                    text-align: center;
+                }
+
+                @media(max-width: 900px) {
+                    .productCard_name {
+                        font-size: 16px;
+                        line-height: 42px;
+                    }
+                    .productCard_price {
+                        font-size: 16px;
+                        line-height: 42px;
+                    }
+                }
+            }
+            .addToCart {
+                width: 100%;
+                border: 1px solid #EAF0ED;
+                position: relative;
+                top: -6px;
+                font: normal normal 600 24px/54px PingFang TC;
+                color: #3F5D45;
+                background: #EAF0ED;
+                text-align: center;
+                &:hover {
+                    background-color: #ffe180d0;
+                }
+            }
+            @media(max-width: 900px) {
+                .addToCart {
+                    font-size: 16px;
+                    line-height: 42px;
+                }
+            }  
+        }
+    }
+}
+
+// 小網 三張card變一張
+@media(max-width: 770px) {
+    .productCard_advise {
+        .productCard_inner {
+            .productCard {
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 20px;
+            }
+        }
+    }
+}
+
+// 大網 subscribe
+.subscribe {
+    position: relative;
+    top: 340px;
+    .sub_background {
+        background-color: #3F5D45;
+        .sub_inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 116px;
+            .sub_left {
+                display: flex;
+                align-items: center;
+                .sub_logo {
+                    width: 40px;
+                }
+                p {
+                    // 思考為什麼父層inline了 子層卻還是跑到下一行
+                    // display: inline-block;
+                    font: normal normal normal 24px/24px Helvetica Neue;
+                    color: #EAF0ED;
+                    position: relative;
+                    left: 10px;
+                }
+
+                @media(max-width: 900px) {
+                    .sub_logo {
+                        width: 36px;
+                    }
+                    p {
+                        font-size: 24px;
+                    }
+                }
+                @media(max-width: 830px) {
+                    .sub_logo {
+                        width: 30px;
+                    }
+                    p {
+                        font-size: 18px;
+                    }
+                }
+            }
+            .sub_right {
+                display: flex;
+                align-items: center;
+                background-color: #EAF0ED;
+                height: 60px;
+                .mailLogo {
+                    margin-left: 20px;
+                    margin-right: 10px;
+                }
+                input {
+                    border: none;
+                    outline: none;
+                    background-color: #EAF0ED;
+                    height: 60px;
+                    padding: 0px;
+                    width: 250px;
+                }
+                @media(max-width: 900px) {
+                    input {
+                        width: 200px;
+                    }
+                }
+                .arrow_background {
+                    position: relative;
+                    left: 1px;
+                    width: 60px;
+                    height: 60px;
+                    background-color: #FFE180;
+                    .arrow {
+                        position: relative;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%,-50%);
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+// 小網subscribe
+@media(max-width: 770px) {
+    .subscribe {
+        .sub_background {
+            .sub_inner {
+                display: block;
+                height: unset;
+                .sub_left {
+                    margin-bottom: 30px;
+                    justify-content: center;
+                }
+                @media(max-width: 256px) {
+                    .sub_left {
+                        .sub_logo {
+                            width: 20px;
+                        }
+                        p {
+                            font-size: 12px;
+                            left: 5px;
+                        }
+                    }
+                }
+                .sub_right {
+                    height: unset;
+                    max-height: 60px;
+                    .mailLogo {
+                        margin-left: 10px;
+                        margin-right: 5px;
+                    }
+                    input {
+                        height: 100%;
+                        width: 70%;
+                    }
+                    .arrow_background {
+                        width: 60px;
+                        height: 60px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 大網footer
+.footer {
+    position: relative;
+    top: 340px;
+    .footer_background {
+        background-color: #EAF0ED;
+        .footer_inner {
+            height: 341px;
+            // left
+            .footer_left {
+                display: inline-block;
+                position: absolute;
+                top: 30px;
+                .footer_logo {
+                    width: 171px;
+                }
+                .footer_info {
+                    font: normal normal normal 16px/24px Helvetica Neue;
+                    color: #3F5D45;
+                    position: relative;
+                    top: 115px;
+                }
+                .line {
+                    width: 32px;
+                    position: relative;
+                    top: 145px;
+                }
+                .fb {
+                    width: 32px;
+                    position: relative;
+                    top: 145px;
+                }
+            }
+            // right
+            .footer_right {
+                position: relative;
+                top: 30px;
+                left: 100%;
+                transform: translateX(-100%);
+                display: inline-block;
+                .footer_title {
+                    width: 59px;
+                    position: relative;
+                    left: 100%;
+                    transform: translateX(-100%);   
+                }
+                .copyright {
+                    font: normal normal normal 16px/19px Times;
+                    color: #3F5D45;
+                    position: relative;
+                    top: 40px;
+                }
+            }
+        }
+    }
+}
+
+// 小網footer
+@media(max-width: 770px) {
+    .footer {
+        .footer_background {
+            .footer_inner {
+                height: unset;
+                .footer_left {
+                    display: block;
+                    position: unset;
+                    top: unset;
+                    .footer_logo {
+                        position: unset;
+                        top: unset;
+                        margin-top: 8px;
+                        width: unset;
+                        max-width: 60%;
+
+                    }
+                    .footer_info {
+                        position: unset;
+                        top: unset;
+                        margin-top: 38px;
+                    }
+                    @media(max-width: 320px) {
+                        .footer_info {
+                            font-size: 12px;
+                        }
+                    }
+                    .line {
+                        position: unset;
+                        top: unset;
+                        margin-top: 30px;
+                    }
+                    .fb {
+                        position: unset;
+                        top: unset;
+                        margin-top: 30px;
+                    }
+                }
+                .footer_right {
+                    display: block;
+                    position: unset;
+                    top: unset;
+                    transform: unset;
+                    .copyright {
+                        position: unset;
+                        top: unset;
+                        margin-top: 30px;
+                    }
+                    @media(max-width: 320px) {
+                        .copyright {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

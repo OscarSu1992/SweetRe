@@ -1,0 +1,10 @@
+@media (max-width: 770px) {
+  .rwd_1024 {
+    display: none !important;
+  }
+}
+@media (min-width: 771px) {
+  .rwd_770 {
+    display: none !important;
+  }
+}/*# sourceMappingURL=rwdStyle.css.map */
