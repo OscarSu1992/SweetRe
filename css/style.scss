@@ -21,7 +21,7 @@
     }
 
     .footer_container {
-        max-width: 375px;
+        max-width: 1024px;
         padding: 30px;
     }
 }
@@ -476,6 +476,7 @@
     .productCard_advise {
         .productCard_inner {
             .productCard {
+                width: 100%;
                 position: relative;
                 left: 50%;
                 transform: translateX(-50%);
@@ -499,6 +500,7 @@
             .sub_left {
                 display: flex;
                 align-items: center;
+                width: 50%;
                 .sub_logo {
                     width: 40px;
                 }
@@ -513,10 +515,10 @@
 
                 @media(max-width: 900px) {
                     .sub_logo {
-                        width: 36px;
+                        // width: 36px;
                     }
                     p {
-                        font-size: 24px;
+                        // font-size: 24px;
                     }
                 }
                 @media(max-width: 830px) {
@@ -524,7 +526,7 @@
                         width: 30px;
                     }
                     p {
-                        font-size: 18px;
+                        font-size: 24px;
                     }
                 }
             }
@@ -533,6 +535,7 @@
                 align-items: center;
                 background-color: #EAF0ED;
                 height: 60px;
+                width: 50%;
                 .mailLogo {
                     margin-left: 20px;
                     margin-right: 10px;
@@ -543,16 +546,16 @@
                     background-color: #EAF0ED;
                     height: 60px;
                     padding: 0px;
-                    width: 250px;
+                    width: 70%;
                 }
                 @media(max-width: 900px) {
                     input {
-                        width: 200px;
+                        width: 100%px;
                     }
                 }
                 .arrow_background {
                     position: relative;
-                    left: 1px;
+                    left: 5px;
                     width: 60px;
                     height: 60px;
                     background-color: #FFE180;
@@ -579,19 +582,32 @@
                 .sub_left {
                     margin-bottom: 30px;
                     justify-content: center;
+                    width: 100%;
                 }
-                @media(max-width: 256px) {
+                @media(max-width: 315px) {
+                    .sub_left {
+                        .sub_logo {
+                            width: 24px;
+                        }
+                        p {
+                            font-size: 20px;
+                            left: 5px;
+                        }
+                    }
+                }
+                @media(max-width: 270px) {
                     .sub_left {
                         .sub_logo {
                             width: 20px;
                         }
                         p {
-                            font-size: 12px;
+                            font-size: 16px;
                             left: 5px;
                         }
                     }
                 }
                 .sub_right {
+                    width: 100%;
                     height: unset;
                     max-height: 60px;
                     .mailLogo {
@@ -600,7 +616,7 @@
                     }
                     input {
                         height: 100%;
-                        width: 70%;
+                        width: 90%;
                     }
                     .arrow_background {
                         width: 60px;
@@ -684,7 +700,7 @@
                         top: unset;
                         margin-top: 8px;
                         width: unset;
-                        max-width: 60%;
+                        max-width: 200px;
 
                     }
                     .footer_info {

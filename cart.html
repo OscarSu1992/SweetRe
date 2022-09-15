@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/rwdStyle.css">
+    <link rel="stylesheet" href="./css/cartStyle.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container headerInner">
+            <img class="navbar_m rwd_770" src="./img/icon/menu.png">
+            <img class="logo rwd_1024" src="./img/icon/headerLogo.png">
+            <img class="logo_m rwd_770" src="./img/icon/headerLogo768.svg">
+            <div class="right">
+                <nav class="navbar rwd_1024">
+                    <ul>
+                        <li>首頁</li>
+                        <li>甜點</li>
+                        <li>登入</li>
+                    </ul>
+                </nav>
+                <img class="cart" src="./img/icon/shoppingCart.png">
+            </div>
+        </div>
+    </header>
+    <!-- cart_form -->
+    <section class="cart_form">
+        <div class="cart_container checkout">
+            <div class="checkout_left">
+                <div class="checkout_title">
+                    <h2>運送</h2>
+                    <div class="checkout_status"></div>
+                </div>
+                
+                <form class="checkout_form">
+                    <div class="form_up">
+                        <div class="name_area">
+                            <label class="lastname_label">姓氏
+                                <input type="text" name="lastName">
+                            </label>
+        
+                            <label class="firstName_label">名字
+                                <input type="text" name="firstName">
+                            </label>
+                        </div>
+                        
+                        <div class="phoneNumber_area">
+                            <label class="phoneNumber_label">電話
+                                <input type="tel" name="phoneNumber">
+                            </label>
+                        </div>
+
+                        <div class="address_area">
+                            <label for="select_country" class="address_label">地址</label>
+                            <select class="select_country" id="select_country">
+                                <option>台北市</option>
+                                <option>新北市</option>
+                                <option>台中市</option>
+                                <option>彰化市</option>
+                                <option>高雄市</option>
+                            </select>
+                            <!-- 這裡好像要用JS才能做到第二層 -->
+                            <select class="select_town">
+                                <option>三重區</option>
+                                <option>板橋區</option>
+                                <option>新莊區</option>
+                                <option>永和區</option>
+                                <option>五股區</option>
+                            </select>
+                            <input type="text" name="address" class="address_input">
+                        </div>
+                    </div>
+                    <input type="submit" value="下一步">
+                </form>
+            </div>
+            <div class="checkout_right">
+                <div class="cart_summary">
+                    <div class="sum_title">訂單摘要</div>
+                    <div class="sum_content">
+                        <table class="sum_price_table">
+                            <tr>
+                                <td>小計</td>
+                                <td>NT$ 2,700</td>
+                            </tr>
+                            <tr>
+                                <td>運費</td>
+                                <td>NT$ 300</td> 
+                            </tr>
+                            <tr>
+                                <td>總計</td>
+                                <td>NT$ 3,000</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="cart_list">
+                    <div class="list_title">購物清單</div>
+                    <div class="list_content">
+                        <div class="list_item1">
+                            <img src="./img/cartListPic1.png">
+                            <p>焦糖馬卡龍（2）</p>
+                            <p>NT$ 900</p>
+                        </div>
+                        <div class="list_item2">
+                            <img src="./img/cartListPic2.png">
+                            <p>焦糖馬卡龍（2）</p>
+                            <p>NT$ 900</p>
+                        </div>
+                        <div class="list_item3">
+                            <img src="./img/cartListPic3.png">
+                            <p>焦糖馬卡龍（2）</p>
+                            <p>NT$ 900</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- subscribe -->
+    <section class="subscribe">
+        <div class="sub_background">
+            <div class="footer_container sub_inner">
+                <!-- left -->
+                <div class="sub_left">
+                    <img class="sub_logo" src="./img/icon/mailAreaLogo.svg">
+                    <p>訂閱你我的甜蜜郵件</p>
+                </div>
+                <!-- right -->
+                <div class="sub_right">
+                    <img class="mailLogo" src="./img/icon/email.png">
+                    <input type="text">
+                    <div class="arrow_background">
+                        <img class="arrow" src="./img/icon/arrow.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer_background">
+            <div class="footer_container footer_inner">
+                <!-- left -->
+                <div class="footer_left">
+                    <img class="footer_logo" src="./img/icon/footerLogo.svg">
+                    <div class="footer_info">
+                        <p class="phone">07-1234-5678</p>
+                        <a class="email" href="mailto:sweetaste@email.com">sweetaste@email.com</a>
+                        <p class="address">800高雄市新興區幸福路520號</p>
+                    </div>
+                    <img class="line" src="./img/icon/line.svg">
+                    <img class="fb" src="./img/icon/facebook.svg">
+                </div>
+                <!-- right -->
+                <div class="footer_right">
+                    <img class="footer_title rwd_1024" src="./img/title/今天是個吃甜點的好日子-直式.svg">
+                    <p class="copyright">© 2018 Sweetaste* All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+</body>
+</html>

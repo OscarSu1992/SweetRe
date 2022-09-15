@@ -1,0 +1,66 @@
+.cart_container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding-left: 122px;
+  padding-right: 122px;
+}
+
+.subscribe {
+  top: 0px;
+}
+
+.footer {
+  top: 0px;
+}
+
+.cart_form .checkout .checkout_left {
+  background: #3F5D45;
+  max-width: 460px;
+  height: 512px;
+}
+.cart_form .checkout .checkout_left .checkout_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px;
+}
+.cart_form .checkout .checkout_left .checkout_title h2 {
+  font: normal normal 600 36px/36px PingFang TC;
+  color: #EAF0ED;
+}
+.cart_form .checkout .checkout_left .checkout_title .checkout_status {
+  border: 1px solid black;
+  width: 170px;
+  height: 1px;
+}
+.cart_form .checkout .checkout_left .checkout_form {
+  height: calc(100% - 96px);
+}
+.cart_form .checkout .checkout_left .checkout_form .form_up {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100% - 24px);
+  padding: 0px 40px 30px 40px;
+}
+.cart_form .checkout .checkout_left .checkout_form .form_up label {
+  display: inline-block;
+  color: #EAF0ED;
+  font: normal normal 600 20px/28px PingFang TC;
+  width: 49%;
+}
+.cart_form .checkout .checkout_left .checkout_form .form_up input {
+  display: block;
+  width: 100%;
+  border-width: 0px;
+  box-sizing: border-box;
+  height: 56px;
+  margin-top: 8px;
+}
+.cart_form .checkout .checkout_left .checkout_form .form_up .firstName_label {
+  position: relative;
+  left: 1%;
+}
+.cart_form .checkout .checkout_left .checkout_form .form_up .phoneNumber_label {
+  width: 100%;
+}/*# sourceMappingURL=cartStyle.css.map */
