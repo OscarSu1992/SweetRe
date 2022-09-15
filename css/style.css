@@ -64,6 +64,7 @@
 }
 .banner {
   overflow: hidden;
+  font-size: 0;
 }
 .banner .mainVisual {
   width: 940px;
@@ -122,9 +123,6 @@
 }
 
 @media (max-width: 770px) {
-  .topic {
-    top: -5px;
-  }
   .topic .topicInner .cardwrapper {
     width: 100%;
   }
@@ -431,6 +429,9 @@
     left: 50%;
     transform: translateX(-50%);
     top: 20px;
+  }
+  .productCard_advise .productCard_inner .productCard .productCard_visual .productCard_image {
+    max-height: unset;
   }
 }
 .subscribe {

@@ -1,3 +1,22 @@
+// https://courses.hexschool.com/courses/html/lectures/14725975 課程範例
+// https://developer.mozilla.org/zh-CN/docs/Web/CSS
+
+// css 選擇器
+// 權重
+// block & inline 特性
+// 偽類 before after
+// hover
+// flex  ( grid 有空再看 )
+// box model
+
+// media
+// transition
+// animation
+// input type
+// px rem em vw vh
+// select value
+// naming BEM https://getbem.com/naming/ ( 有空再看 )
+
 .container {
     max-width: 1024px;
     margin: 0 auto;
@@ -87,6 +106,7 @@
 // 大網banner
 .banner {
     overflow: hidden;  
+    font-size: 0;
     .mainVisual {
         width: 940px;
         position: relative;
@@ -153,9 +173,14 @@
 
 // 小網topic
 // 須研究banner跟topic之間為何多了5px
+
+// inline 的 vertical-align: baseline; 對齊方式
+// 解決方法：
+// font-size: 0; 會讓 inline 元素的 vertical-align 失效
+// line-height: 0; 會讓inline元素的 vertical-align 失效
 @media(max-width: 770px) {
     .topic {
-        top: -5px;
+        // top: -5px;
         .topicInner {
             .cardwrapper {
                 width: 100%;
@@ -481,6 +506,12 @@
                 left: 50%;
                 transform: translateX(-50%);
                 top: 20px;
+                .productCard_visual {
+                    .productCard_image {
+                        max-height: unset;
+                    }
+                } 
+                
             }
         }
     }
