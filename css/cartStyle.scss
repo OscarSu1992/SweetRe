@@ -32,9 +32,10 @@
                     font: normal normal 600 36px/50px PingFang TC;
                     color: #EAF0ED;
                 }
+
                 .checkout_status {
                     border: 1px solid black;
-                    width: 170px;
+                    width: 50%;
                     height: 1px;
                 }
             }
@@ -60,6 +61,10 @@
                         box-sizing: border-box;
                         height: 56px;
                         margin-top: 8px;
+                        font: normal normal 300 16px/28px PingFang TC;
+                        color: #8DA291;
+                        background-color: #EAF0ED;
+                        padding-left: 20px;
                     }
                     .firstName_label {
                         position: relative;
@@ -81,10 +86,14 @@
                             border-width: 0px;
                             box-sizing: border-box;
                             height: 56px;
+                            font: normal normal 300 16px/28px PingFang TC;
+                            color: #8DA291;
+                            background-color: #EAF0ED;
+                            padding-left: 16px;
                         }
                         .select_town {
                             position: relative;
-                            left: 0.5%;
+                            left: 1%;
                         }
 
                     }
@@ -94,9 +103,43 @@
                     border-width: 0px;
                     box-sizing: border-box;
                     height: 65px;
+                    font: normal normal 600 24px/28px PingFang TC;
+                    color: #3F5D45;
+                    &:hover {
+                        background-color: #ffe180;
+                    }
                 }
             }
         }
+        @media(max-width: 300px) {
+            .checkout_left {
+                height: unset;
+                .checkout_form {
+                    .form_up {
+                        label {
+                            width: 100%;
+                        }
+                        .firstName_label {
+                            left: 0%;
+                        }
+                        .address_area {
+                            .select_country{
+                                width: 100%;
+                                padding: 0;
+                                left: 0%;
+                                margin-bottom: 8px;
+                            }
+                            .select_town{
+                                width: 100%;
+                                padding: 0;
+                                left: 0%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         .checkout_right {
             margin-left: 20px;
             width: 300px;
@@ -108,7 +151,8 @@
                     height: 65px;
                     background-color: #EAF0ED;
                     text-align: center;
-                    line-height: 65px;
+                    font: normal normal 600 24px/65px PingFang TC;
+                    color: #8DA291;
                 }
                 .sum_content {
                     border: 1px solid #EAF0ED;
@@ -144,7 +188,8 @@
                     height: 65px;
                     background-color: #EAF0ED;
                     text-align: center;
-                    line-height: 65px;
+                    font: normal normal 600 24px/65px PingFang TC;
+                    color: #8DA291;
                 }
                 .list_content {
                     border: 1px solid #EAF0ED;
@@ -161,15 +206,65 @@
                         }
                         .list_info {
                             display: inline-block; 
-                            margin: auto; 
+                            margin: auto;
+                            font: normal normal 300 16px/20px PingFang TC;
+                            color: #8DA291; 
+                            .info_price {
+                                font: normal normal 600 20px/20px PingFang TC;
+                            }
                         }
                     }
                     .list_item2 {
                         margin-top: 16px;
                         margin-bottom: 16px;
                    } 
+                   @media(max-width: 1000px) {
+                        .list_item {
+                            img {
+                                width: 90px;
+                                height: 60px;
+                            }
+                            .list_info {
+                                font-size: 14px;
+                                .info_price {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                   }
+
+                   @media(max-width: 900px) {
+                    .list_item {
+                        img {
+                            width: 75px;
+                            height: 50px;
+                        }
+                        .list_info {
+                            font-size: 12px;
+                            .info_price {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+               }
                 }
             }
         }
+        @media(max-width: 770px) {
+            .checkout_right {
+                display: none;
+            }
+        }
     }
+}
+@media(max-width: 770px) {
+    .cart_form {
+        margin-bottom: 0;
+        .checkout {
+            padding: 0;
+            .checkout_left {
+                width: 100%;
+            }
+        }
+    }  
 }
