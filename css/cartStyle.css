@@ -112,13 +112,11 @@
   }
   .cart_form .checkout .checkout_left .checkout_form .form_up .address_area .select_country {
     width: 100%;
-    padding: 0;
     left: 0%;
     margin-bottom: 8px;
   }
   .cart_form .checkout .checkout_left .checkout_form .form_up .address_area .select_town {
     width: 100%;
-    padding: 0;
     left: 0%;
   }
 }
