@@ -34,10 +34,54 @@
                 }
 
                 .checkout_status {
-                    border: 1px solid black;
-                    width: 50%;
+                    border: 1px solid #EAF0ED;
+                    width: 45%;
                     height: 1px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .ball_1 {
+                        border: 1px solid #EAF0ED;
+                        border-radius: 50%;
+                        width: 24px;
+                        height: 24px;
+                        background-color: #3F5D45;
+                        position: relative;
+                        transform: translateX(-1px);
+                        &::before {
+                            content: "";
+                            border: 1px solid #EAF0ED;
+                            border-radius: 50%;
+                            width: 12px;
+                            height: 12px;
+                            background-color: #EAF0ED;
+                            position: absolute;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            top: 4px;
+                        }
+                    }
+
+                    .ball_2 {
+                        border: 1px solid #EAF0ED;
+                        border-radius: 50%;
+                        width: 24px;
+                        height: 24px;
+                        background-color: #3F5D45;
+                    }
+
+                    .ball_3 {
+                        border: 1px solid #EAF0ED;
+                        border-radius: 50%;
+                        width: 24px;
+                        height: 24px;
+                        background-color: #3F5D45;
+                        position: relative;
+                        transform: translateX(1px);
+                    }
                 }
+               
+                
             }
 
             .checkout_form {
